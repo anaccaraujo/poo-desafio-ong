@@ -1,0 +1,104 @@
+🚀 Sistema para gestão de ONG
+
+Prazo máximo de entrega: 16/06/2026 às 23:59
+
+Formato de entrega: Link do Repositório (GitHub) + Prints de Execução via Google Forms.
+
+🎯 Objetivo
+
+Neste desafio, vocês deixarão de ser apenas "estudantes" e atuarão como Engenheiros de Software construindo o núcleo (Core) de um sistema de gestão para a nossa ONG parceira. O objetivo é aplicar os pilares da Programação Orientada a Objetos: Encapsulamento, Herança e Composição.
+
+🏗️ Especificações do sistema (o que você deve codificar)
+
+Seu sistema deve ser escrito em Java e conter, no mínimo, a seguinte estrutura arquitetural:
+
+1. A superclasse: `MembroONG` (a base)
+
+* Atributos Privados: `nome` (String), `cpf` (String) e `diasAtuacao` (int).
+
+* Encapsulamento: Crie os métodos Getters e Setters.
+
+* Regra de Negócio (Setter): O método `setDiasAtuacao(int dias)` não pode aceitar valores negativos.
+
+* Comportamento: Crie um método `exibirResumo()` que imprima o nome e os dias de atuação.
+
+
+
+2. A herança: `Voluntario` e `Doador` (a especialização)
+
+* Crie a subclasse `Voluntario` que herda (`extends`) de `MembroONG`.
+
+   * Atributo específico: `setor` (String - ex: "Logística", "Aulas").
+
+   * Sobrescrita: Use `@Override` para reescrever o método `exibirResumo()`, incluindo agora o setor do voluntário.
+
+* Crie a subclasse `Doador` que herda (`extends`) de `MembroONG`.
+
+   * Atributo específico: `valorDoadoMensal` (double).
+
+   * Sobrescrita: Use `@Override` para reescrever o método `exibirResumo()`, exibindo o status de "Doador Ativo" e o valor.
+
+
+
+3. A composição: `ProjetoSocial` ("o lego")
+
+* Regra do TEM-UM: Um projeto de extensão não é um voluntário, ele tem um voluntário líder.
+
+* Crie a classe `ProjetoSocial`.
+
+* Atributos: `nomeDoProjeto` (String), `metaImpacto` (int - número de pessoas atendidas).
+
+* Composição: Adicione um atributo `lider` do tipo `Voluntario`.
+
+* Comportamento: Crie um método `iniciarProjeto()` que imprima uma mensagem dizendo que o projeto começou, quem é o líder responsável e qual o setor dele.
+
+
+
+4. A classe de teste: `SistemaMain`
+
+* Crie a classe que contém o método `public static void main(String[] args)`.
+
+* Neste método, você deve:
+
+   1. Instanciar um `Voluntario` e um `Doador`, preenchendo seus dados via Setters.
+
+   2. Instanciar um `ProjetoSocial`.
+
+   3. Atribuir o voluntário criado como líder desse projeto.
+
+   4. Chamar os métodos `exibirResumo()` das pessoas e o `iniciarProjeto()` do projeto para provar que tudo funciona em harmonia.
+
+
+
+
+📦 Instruções de submissão
+
+Para simular o fluxo de trabalho real de desenvolvimento de software, a entrega não será um arquivo solto, mas sim um repositório versionado.
+
+1. Versionamento (GitHub):
+
+   * Crie um repositório público no seu GitHub pessoal chamado `poo-desafio-ong`.
+
+   * Faça o commit de todos os seus arquivos `.java`.
+
+   * Opcional (Mas recomendado): Adicione um arquivo `README.md` simples explicando o que é o projeto.
+
+2. Geração de evidências (prints):
+
+   * Execute a sua classe `SistemaMain` no VS Code.
+
+   * Tire um print screen (captura de tela) legível que mostre o seu código e o terminal exibindo os resultados corretos das impressões.
+
+3. Envio final (Google Forms):
+
+   * Acesse o formulário oficial de entrega: https://forms.gle/RiZJonw7omWJ7Ujs5
+
+   * Preencha seu nome completo.
+
+   * Cole o link do seu repositório do GitHub.
+
+   * Faça o upload do print do terminal no campo indicado.
+
+⚠️ Atenção: Entregas fora do prazo (após 16/06 às 23:59) ou repositórios privados (que o professor não consiga acessar) sofrerão penalidades na nota.
+
+Boa codificação e construam com qualidade!"
